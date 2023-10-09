@@ -7,6 +7,12 @@
     src: url(fontes/Sriracha-Regular.ttf);
 }
 
+:root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: Passion One, cursive;
+    --fonte3: Sriracha, cursive, Arial, sans-serif;
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -15,24 +21,25 @@
 html, body {
     min-height: 100vh;
     background-color: lightgrey;
+    font-family: var(--fonte1);
 }
 
 header {
     background-color: black;
     color: white;
     text-align: center;
-    padding: 80px;
+    padding: 70px;
 }
 
 header > h1 {
-    font-size: 8em;
-    font-family: Passion One, cursive;
+    font-size: 8vw;
+    font-family: var(--fonte2);
     font-variant: small-caps;
 }
 
 header > p {
     margin-top: 15px;
-    font-size: 1.5em;
+    font-size: 1.25em;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -51,6 +58,12 @@ section {
     padding-bottom: 10vh;
     line-height: 2em;
     padding-left: 30px;
+    font-family: var(--fonte3);
+    font-size: 3.5vw;
+}
+
+section > p {
+    padding-bottom: 2em;
 }
 
 section.normal {
@@ -61,38 +74,27 @@ section.normal {
 section.imagem {
     background-color: rgb(51, 51, 51);
     color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.404);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 section.imagem > p {
-    width: 400px;
-    background-color: rgba(0, 0, 0, 0.452);
-}
-
-/* main p {
-    font-family: Sriracha, cursive, Arial, sans-serif;
-    padding: 30px;
-    font-size: 3.5em;
-}
-
-section#joaninha {
-    max-width: 100%;
-    background-image: url(imagens/background001.jpg);
-    background-attachment: fixed;
-    box-shadow: inset 0px 10px 20px rgba(0, 0, 0, 0.377);
-}
-
-section#livro {
-    max-width: 100%;
-    background-image: url(imagens/background002.jpg);
-    background-attachment: fixed;
-    box-shadow: inset 0px 10px 20px rgba(0, 0, 0, 0.377);
-}
-
-section p {
     display: inline-block;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.315);
-} */
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px  0px black;
+}
+
+section#img01 {
+    background-image: url(imagens/background001.jpg);
+    background-position: right center;
+}
+
+section#img02 {
+    background-image: url(imagens/background002.jpg);
+    background-position: right center;
+}
 
 footer {
     background-color: black;
